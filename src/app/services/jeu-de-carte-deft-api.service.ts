@@ -6,9 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JeuDeCarteDeftApiService {
 
+  // variables
   private _url : string = "https://www.superheroapi.com/api/";
   private _token : string = "10227629316945584";
 
+  // propriétés (get set)
+  private get _basic_url(): string { return `${this._url}${this._token}/`;}
+
+  // constructeur 
   constructor(private _http:HttpClient) { }
-  private get _basic_url(): string { return `${this._url}${this._token}/`; }
+
+  // méthodes
 }
